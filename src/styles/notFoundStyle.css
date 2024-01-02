@@ -1,0 +1,131 @@
+.notFoundContainer{
+    position: relative;
+    height:100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: 0.7s;
+    overflow: hidden;
+    cursor: pointer;
+}
+.notFoundContainer:hover .notFoundhover1{
+    opacity: 0.9;
+    z-index: 1;
+    left:5px;
+    transform: scale(1.1);
+}
+.notFoundContainer:hover .notFoundhover2{
+    opacity: 0.7;
+    left:5px;
+    z-index: 2;
+    transform: scale(1.2);
+
+}
+.notFoundContainer:hover .notFoundhover3{
+    opacity: 0.6;
+    left:5px;
+    z-index: 3;
+    transform: scale(1.3);
+}
+
+.notFoundhoverEffect{
+    position: absolute;
+    z-index: 0;
+    left:0px;
+    transform: scale(1);
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.notFoundPicture{
+    z-index: -111;
+    position: absolute;
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+.white-notfound{
+    background: rgba(0, 0, 0, 0);  /* fallback for old browsers */
+    height:70%;
+    width:500px;
+    border-radius: 7px;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    padding:50px;
+    transition: 0.8s;
+    word-wrap: break-word;
+}
+
+.title-notfound{
+    font-size:calc(40px + 0.7vw);
+    font-weight: 700;
+    color:rgb(235, 231, 231);
+    text-align:center;
+    line-height: 1.2;
+}
+.caption-notfound{
+    font-size:15px;
+    font-weight: 200;
+    color:rgb(214, 214, 214);
+    text-align: center;
+}
+
+
+/* mobile responsiveness */
+@media screen and (max-width: 780px) {
+    .notFoundContainer{
+        justify-content: center;
+        align-items: center;
+        padding:10vw;
+        border: 1px solid white;
+    }
+    .white-notfound{
+        padding:10vw !important;
+        width: 90vw;
+        margin-right: 0;
+        padding:40px 10px 10px 10px;
+    }
+    .title-notfound{
+        font-size:50px;
+        font-weight: 600;
+    }
+}
+@media screen and (max-height: 600px) {
+    .caption-notfound{
+        display: none !important;
+    }
+    .iconNotFound{
+        display: none !important;
+    }
+}
+
+
+@media screen and (max-height: 646px) {
+    .white-notfound{
+        height:85%;
+        width:500px;
+        padding:50px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .white-notfound{
+        align-items: center;
+        height:60vh;
+        border: 1px solid white;
+    }
+    .notFoundContainer{
+        width:100vw;
+        padding:0px 10px;
+    }
+    .title-notfound{
+        font-size: calc(35px + 4vw);
+    }
+    .caption-notfound{
+        display: none;
+    }
+}
